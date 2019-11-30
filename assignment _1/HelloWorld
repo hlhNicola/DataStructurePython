@@ -1,0 +1,9 @@
+class HelloWorld:
+    def printHello(self):
+        print("Hello World")
+
+
+ourInstance = HelloWorld()
+ourInstance.printHello()
+
+
