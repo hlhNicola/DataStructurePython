@@ -55,8 +55,8 @@ class DlinkedListADT:
     def deleteLast(self):
         if self.front is None:
             raise Exception('The list is empty')
-        n = Node(self.front)
-        if self.front is not None and self.front == self.rear:
+        n = Node(self.rear)
+        if self.rear is not None and self.rear == self.front:
             self.front = None
             self.rear = None
         else:
@@ -104,4 +104,14 @@ class DlinkedListADT:
                 maxCostBook = n.Book
             n = n.next
         return maxCostBook
+
+    def MergeList(self, newList):
+        if newList is None:
+            raise Exception("InValid input!")
+        if newList.size() == 0:
+            return
+        else:
+            self.rear.next = newList.front
+            newList.front.prev = self.rear
+            return
 
