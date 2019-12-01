@@ -43,7 +43,7 @@ class DlinkedListADT:
         if self.front is None:
             raise Exception('The list is empty')
         n = Node(self.front)
-        if self.front is not None & self.front == self.rear:
+        if self.front is not None and self.front == self.rear:
             self.front = None
             self.rear = None
         else:
@@ -56,7 +56,7 @@ class DlinkedListADT:
         if self.front is None:
             raise Exception('The list is empty')
         n = Node(self.front)
-        if self.front is not None & self.front == self.rear:
+        if self.front is not None and self.front == self.rear:
             self.front = None
             self.rear = None
         else:
@@ -86,20 +86,19 @@ class DlinkedListADT:
 
     def findBook(self, isbn):
         n = self.front
-        while n is not None & n.Book.isbn != isbn:
+        while n is not None and n.Book.isbn != isbn:
             n = n.next
-        if n is None:
-            print('Isbn', isbn, ' Not Found')
-            return None
-        else:
+        if n is not None:
             return n.Book
+        else:
+            return None
 
     def returnMaxCostBook(self):
         n = self.front
         maxCost = 0
         maxCostBook = n.Book
         while n is not None:
-            cost = n.pages * 0.005
+            cost = n.Book.pages * 0.005
             if cost > maxCost:
                 maxCost = cost
                 maxCostBook = n.Book
