@@ -1,3 +1,6 @@
+# Lihong
+# implementation of StackADT class and related operations
+
 from assignment_2 import DLinkedListADT
 
 class StackADT:

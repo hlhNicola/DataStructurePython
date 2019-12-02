@@ -1,3 +1,6 @@
+# Lihong
+# implementation of ConvertToArray method and TestConvertToArray method
+
 from assignment_2 import DLinkedListADT
 from assignment_2 import Book
 

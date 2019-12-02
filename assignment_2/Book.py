@@ -1,3 +1,6 @@
+# Lihong
+# implementation of Bookclass
+
 class Book:
     def __init__(self, isbn, pages, title):
         self.isbn = isbn

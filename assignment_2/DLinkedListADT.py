@@ -1,3 +1,6 @@
+# Lihong
+# implementation of DlinkedListADT class and related operations (include merge list)
+
 class Node:
     def __init__(self, initdata):
         self.Book = initdata
