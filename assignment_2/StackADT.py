@@ -26,8 +26,13 @@ class StackADT:
     def pop(self):
         if self.isEmpty():
             raise Exception("This Stack is Empty!")
-        self.items.deleteLast()
+        return self.items.deleteLast()
 
     def size(self):
         return self.items.size()
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception("This Stack is Empty!")
+        return self.items.rear.Book
 

@@ -24,9 +24,14 @@ class QueueADT:
         self.items.addLast(item)
 
     def deQueue(self):
-        if self.isEmpty():
-            raise Exception("This Stack is Empty!")
-        self.items.deleteFirst()
+        if self.sEmpty():
+            raise Exception("This Queue is Empty!")
+        return self.items.deleteFirst()
 
     def size(self):
         return self.items.size()
+
+    def peek(self):
+        if self.sEmpty():
+            raise Exception("This Queue is Empty!")
+        return self.items.front.Book
