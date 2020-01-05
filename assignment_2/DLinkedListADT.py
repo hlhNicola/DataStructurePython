@@ -98,6 +98,8 @@ class DlinkedListADT:
 
     def returnMaxCostBook(self):
         n = self.front
+        if n is None:
+            return None
         maxCost = 0
         maxCostBook = n.Book
         while n is not None:
