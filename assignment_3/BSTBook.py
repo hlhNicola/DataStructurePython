@@ -10,6 +10,8 @@ class Node:
     def getKey(self):
         return self.Book.getKey()
 
+    def getAuthor(self):
+        return self.Book.getAuthor()
 
 class BST:
     def __init__(self, data):
@@ -58,7 +60,7 @@ class BST:
 
     def printAuthorR(self, root, name):
         if root is not None:
-            if root.Book.author == name:
+            if root.getAuthor() == name:
                 print('ISBN:', root.getKey(), 'is writen by', name)
             self.printAuthorR(root.left, name)
             self.printAuthorR(root.right, name)

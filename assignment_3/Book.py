@@ -11,6 +11,9 @@ class Book:
     def getKey(self):
         return self.isbn
 
+    def getAuthor(self):
+        return self.author
+
     def bookValidation(self):
         if len(self.isbn) is not 13:
             raise Exception('Isbn should be 13 digits!')

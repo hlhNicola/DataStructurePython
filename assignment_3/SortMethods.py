@@ -14,7 +14,7 @@ def bubbleSort(num):
                 num[j], num[j+1] = num[j+1], num[j]  # swap them
                 swapped = True
 
-# insertion sort
+# selection sort
 
 
 def selectionSort(num):
@@ -71,7 +71,7 @@ def testInsertionSort(num):
 
 # testBubbleSort(array)
 # testSelectionSort(array)
-# testInsertionSort(array)
+testInsertionSort(array)
 
 # ------- Get Time Func -----------------------------------------
 

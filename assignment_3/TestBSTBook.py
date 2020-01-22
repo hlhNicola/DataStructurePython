@@ -19,7 +19,6 @@ BookTree.insert(DataStructure)
 print(BookTree.find(1000000000001))
 print(BookTree.find(1000000000005))
 
-BookTree.printAuthor('JK.R')
-
 
 BookTree.printBooks()
+BookTree.printAuthor('JK.R')
