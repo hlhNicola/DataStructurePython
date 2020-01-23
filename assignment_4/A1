@@ -1,0 +1,37 @@
+# Lihong
+# implementation Floyd (Dynamic prog)
+
+def floyd2(n, W, P):
+    for i in range(0, n):
+        for j in range(0, n):
+            P[i][j] = 0
+    D = W.copy()
+
+    for k in range(0, n):
+        for i in range(0, n):
+            for j in range(0, n):
+                if D[i][k]+D[k][j] < D[i][j]:
+                    P[i][j] = k + 1
+                    D[i][j] = D[i][k]+D[k][j]
+    print('D Matrix: ')
+    for row in D:
+        print(' '.join([str(elem) for elem in row]))
+    print('P Matrix: ')
+    for row in P:
+        print(' '.join([str(elem) for elem in row]))
+
+W = [[0, 1, 5, 10, float('inf')],
+     [8, 0, float('inf'), 3, float('inf')],
+     [2, float('inf'), 0, 14, 2],
+     [float('inf'), 10, float('inf'), 0, float('inf')],
+     [float('inf'), float('inf'), 1, 2, 0]]
+P = [[0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0]]
+
+
+floyd2(5, W, P)
+# V3 to V1: V3 V1
+# V5 to V1: V5 V3 V1
